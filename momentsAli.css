@@ -1,0 +1,76 @@
+body {
+    background-image: url(Images/backgroundAli.jpeg);
+    background-repeat: repeat;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.gallery figure {  /* Estilos para el contenedor de la imagen y el subtítulo */
+    position: relative; /* Para posicionar el marco */
+    margin: 3%; /* Elimina el margen predeterminado de figure */
+    padding: 10%; /* Marco blanco del 10% */
+    background-color: rgba(255, 255, 255, 0.697); /* Color del marco */
+    border: 1px solid #ccc; /* Borde del marco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+    overflow: hidden; /* Recorta la imagen si se sale del marco */
+    border-style: dashed;
+    border-color: #000000;
+    box-shadow: 10px 10px 8px #262626f0;;
+
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    font-family:"Turret Road", sans-serif;
+    font-weight: 800;
+    position: absolute;
+    bottom: 10px; /* Espacio desde el borde inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    background-color: #ca5570;
+    padding: 3px 18px 3px 18px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ffffff;
+    box-shadow: 10px 10px 8px #2626268a;;
+}
+
+.gallery figcaption:hover {
+    background-color: #ea0a55dd; 
+  }
+
+  .arrow-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+ 
+/* Responsividad */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

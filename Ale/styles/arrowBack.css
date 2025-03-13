@@ -1,0 +1,19 @@
+.arrowBack { 
+    padding: 20px;
+    font-size: 46px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.601);
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+.arrowBack:hover {
+    color: #000000; 
+}
+
+.arrowBack::before {
+    content: '←'; 
+    margin-right: 12px;
+}
